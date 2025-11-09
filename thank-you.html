@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Thank You - RAD Programs</title>
+  </head>
+  <body
+    style="background: black; color: white; text-align: center; padding: 50px"
+  >
+    <h1>Thank You for Joining RAD!</h1>
+    <p>Verifying your payment...</p>
+    <script>
+      const PDT_TOKEN =
+        "7GzZqnj5dY_ohlMrGP4_ERM9tHKF34x2FbTAtDCUZZn8ApEK8WJfIp6NWGq";
+      const SHEET_URL =
+        "https://script.google.com/macros/s/AKfycbyoFzb3ok1ocwJH9dg_bzHcyZHIvNS1iQKriYaK59Rmg7JO-Yd4zXN-yYHSayLuqCtI/exec";
+
+      const urlParams = new URLSearchParams(window.location.search);
+      const tx = urlParams.get("tx"); // PayPal transaction ID
+
+      async function verifyPayment() {
+        if (!tx) {
+          document.body.innerHTML = "<h1>Payment not found.</h1>";
+          return;
+        }
+
+        try {
+          // Call your serverless verification endpoint
+          const res = await fetch(
+            `https://i1839ry249rf4ufr08uf44230490930fopsopfijsodh87w73924gf.li231sdyt.workers.dev/?tx=${tx}&at=${PDT_TOKEN}`
+          );
+          const text = await res.text();
+
+          if (text.includes("SUCCESS")) {
+            const data = JSON.parse(localStorage.getItem("applicationData"));
+            if (data) {
+              await fetch(SHEET_URL, {
+                method: "POST",
+                mode: "no-cors",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                  ...data,
+                  payment_status: "Paid",
+                  transaction_id: tx,
+                }),
+              });
+            }
+
+            document.body.innerHTML = `
+            <h1>🎉 Payment Successful!</h1>
+            <p>Thank you for joining RAD Programs.</p>
+            <p>Transaction ID: ${tx}</p>
+          `;
+            localStorage.removeItem("applicationData");
+          } else {
+            document.body.innerHTML = "<h1>Payment Verification Failed.</h1>";
+          }
+        } catch (err) {
+          console.error(err);
+          document.body.innerHTML = "<h1>Error verifying payment.</h1>";
+        }
+      }
+
+      verifyPayment();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1"
+      type="module"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/19a6c9693b.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>RAD Programs - Drones</title>
+    <link rel="stylesheet" href="animations.css" />
+    <script src="animations.js" defer></script>
+  </head>
+  <body class="bg-black text-white">
+    <!-- NAV -->
+    <header class="absolute inset-x-0 top-0 z-50">
+      <nav
+        aria-label="Global"
+        class="flex items-center justify-between p-6 lg:px-8"
+      >
+        <div class="flex lg:flex-1">
+          <a href="./index.html" class="-m-1.5 p-1.5 btn-animate fade-in">
+            <h1 class="text-red-500 font-extrabold text-xl slide-up">RAD</h1>
+          </a>
+        </div>
+        <div class="flex lg:hidden">
+          <button
+            type="button"
+            id="open-menu"
+            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white btn-animate fade-in"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              aria-hidden="true"
+              class="size-6"
+            >
+              <path
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="hidden lg:flex lg:gap-x-12">
+          <a href="./programs.html" class="text-sm font-semibold text-red-500">Programs</a>
+          <a href="./about.html" class="text-sm font-semibold text-white">About</a>
+          <a href="./newsletter.html" class="text-sm font-semibold text-white">Newsletter</a>
+          <a href="./events.html" class="text-sm font-semibold text-white">Events</a>
+          <a href="products.html" class="text-sm font-semibold text-white">Products</a>
+          <a href="./join.html" class="text-sm font-semibold text-white">Join Us!</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="bg-black py-24">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8 text-center">
+        <h1 class="text-5xl font-extrabold text-white sm:text-6xl">Drones Programs</h1>
+        <p class="mt-6 text-lg text-gray-400 max-w-2xl mx-auto">
+          Explore the phases of drone training: learning, advanced certification, and technician courses.
+        </p>
+      </div>
+    </section>
+
+    <!-- Drones Part 1 -->
+    <section class="bg-black py-16">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
+        <!-- Text -->
+        <div class="text-white">
+          <h2 class="text-red-400 text-base font-semibold">Drones — Part 1</h2>
+          <h3 class="mt-2 text-3xl font-bold sm:text-4xl">Learning Phase</h3>
+          <p class="mt-4 text-gray-300">
+            <strong>What you will learn:</strong>
+            <ul class="list-disc list-inside mt-2">
+              <li>The theory behind drones</li>
+              <li>Usage & development (theory)</li>
+              <li>Practice flying drones</li>
+              <li>Master your own obstacle course</li>
+            </ul>
+          </p>
+          <p class="mt-4 text-gray-300"><strong>Prerequisites:</strong> 9th–12th grade (recommended 9th–10th)</p>
+          <p class="mt-2 text-gray-300"><strong>Program Details:</strong> Cost: Based off project, Duration: 4 classes/month for 3 months</p>
+          <p class="mt-2 text-gray-300"><strong>Certification:</strong> RAD certification exam required</p>
+        </div>
+        <!-- Image -->
+        <div class="flex justify-center">
+          <img src="pics/pexels-yusuf-miah-70201554-14828475.jpg" alt="Drone Flying" class="w-[640px] h-[480px] object-cover rounded-lg shadow-lg"/>
+        </div>
+      </div>
+    </section>
+
+    <!-- Drones Part 2 -->
+    <section class="bg-black py-16">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center lg:flex-row-reverse">
+        <!-- Text -->
+        <div class="text-white">
+          <h2 class="text-red-400 text-base font-semibold">Drones — Part 2</h2>
+          <h3 class="mt-2 text-3xl font-bold sm:text-4xl">Advanced Drones</h3>
+          <p class="mt-4 text-gray-300">
+            <strong>What you will learn:</strong>
+            <ul class="list-disc list-inside mt-2">
+              <li>FAA regulations</li>
+              <li>Scientific principles of VTOL</li>
+              <li>Specialty drone flight practice</li>
+              <li>Prepare for FAA Part 107 exam</li>
+            </ul>
+          </p>
+          <p class="mt-4 text-gray-300"><strong>Prerequisites:</strong> 12th grade and higher</p>
+          <p class="mt-2 text-gray-300"><strong>Program Details:</strong> Cost: Based off project, Duration: 20 theory + 10 practical classes (1–1.5 years)</p>
+          <p class="mt-2 text-gray-300"><strong>Certification:</strong> FAA Commercial Drone Pilot license</p>
+        </div>
+        <!-- Image -->
+        <div class="flex justify-center">
+          <img src="pics/pexels-thisisengineering-19895780.jpg" alt="Part2-Drones-Image" class="w-[640px] h-[480px] object-cover rounded-lg shadow-lg"/>
+        </div>
+      </div>
+    </section>
+
+    <!-- Drones Part 3 -->
+    <section class="bg-black py-16">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
+        <!-- Text -->
+        <div class="text-white">
+          <h2 class="text-red-400 text-base font-semibold">Drones — Part 3</h2>
+          <h3 class="mt-2 text-3xl font-bold sm:text-4xl">Technician Course</h3>
+          <p class="mt-4 text-gray-300">
+            <strong>What you will learn:</strong>
+            <ul class="list-disc list-inside mt-2">
+              <li>Build mission-based drones</li>
+              <li>Fly drones you build</li>
+              <li>Hands-on design-driven learning</li>
+            </ul>
+          </p>
+          <p class="mt-4 text-gray-300"><strong>Prerequisites:</strong> High school or higher (recommended 11th–12th)</p>
+          <p class="mt-2 text-gray-300"><strong>Program Details:</strong> Cost: Project-based (includes materials)</p>
+          <p class="mt-2 text-gray-300"><strong>Duration:</strong> Based on project</p>
+        </div>
+        <!-- Image -->
+        <div class="flex justify-center">
+          <img src="pics/pexels-pok-rie-33563-13310740.jpg" alt="Drone Technician Course" class="w-[640px] h-[480px] object-cover rounded-lg shadow-lg"/>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black text-gray-300 py-12 border-t border-gray-800">
+      <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div>
+          <h2 class="text-2xl font-bold text-red-500">R A D</h2>
+          <p class="mt-3 text-sm text-gray-400">© 2025 by <span class="text-red-500">RAD</span>. All rights reserved.</p>
+        </div>
+        <div class="flex flex-col space-y-3">
+          <a href="about.html" class="hover:text-red-500 transition">About</a>
+          <a href="programs.html" class="hover:text-red-500 transition">Programs</a>
+          <a href="join.html" class="hover:text-red-500 transition">Membership</a>
+        </div>
+        <div class="text-sm space-y-2">
+          <p>Tel: <a href="tel:4083687751" class="hover:text-red-500">408-368-7751</a></p>
+          <p>Email: <a href="mailto:hima@techyslab.com" class="hover:text-red-500">hima@techyslab.com</a></p>
+          <p>1187 Hibiscus Way<br />Livermore, CA 94551</p>
+        </div>
+      </div>
+      <div class="mt-10 flex justify-center space-x-6">
+        <a href="#" class="hover:text-red-500 transition"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#" class="hover:text-red-500 transition"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.instagram.com/rad_innovations/" class="hover:text-red-500 transition"><i class="fa-brands fa-square-instagram"></i></a>
+      </div>
+    </footer>
+    
+    <!-- Mobile Menu -->
+    <div
+      id="mobile-menu"
+      class="lg:hidden hidden fixed inset-0 bg-black/90 z-40"
+    >
+      <div
+        class="flex flex-col items-center justify-center h-full space-y-6 text-white"
+      >
+        <a href="programs.html" class="text-lg font-semibold">Programs</a>
+        <a href="about.html" class="text-lg font-semibold">About</a>
+        <a href="newsletter.html" class="text-lg font-semibold">Newsletter</a>
+        <a href="events.html" class="text-lg font-semibold">Events</a>
+        <a href="products.html" class="text-lg font-semibold">Products</a>
+        <a href="join.html" class="text-lg font-semibold">Join Us!</a>
+        <button id="close-menu" class="mt-8 text-red-500 font-bold">
+          Close ✕
+        </button>
+      </div>
+    </div>
+    
+    <script>
+      const openMenu = document.getElementById("open-menu");
+      const closeMenu = document.getElementById("close-menu");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      document.addEventListener("DOMContentLoaded", (event) => {
+        openMenu.addEventListener("click", () => {
+          mobileMenu.classList.remove("hidden");
+        });
+
+        closeMenu.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+        });
+      });
+    </script>
+  </body>
+</html>

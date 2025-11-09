@@ -1,0 +1,68 @@
+/* Paste this in a file loaded after Tailwind CSS (or instead of @apply route) */
+/* Modern, seamless animation styles for RAD Innovations */
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 1s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+/* Slide-up animation */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.slide-up {
+  animation: slideUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+/* Button hover effect (plain CSS, keeps !important) */
+.btn-animate {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              background 0.3s,
+              color 0.3s,
+              filter 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, box-shadow, background, color, filter;
+  /* optional base styles so it looks decent without extra classes */
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  padding: 0.6rem 1.1rem;
+}
+
+.btn-animate:hover {
+  transform: translateY(0) scale(1.02) !important;
+  box-shadow: 0 12px 40px rgba(255, 0, 0, 0.22);
+  filter: brightness(0.90);
+}
+
+/* Image zoom-in on hover */
+.img-animate {
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.img-animate:hover {
+  transform: scale(1.04) rotate(-1deg);
+}
+
+/* Staggered fade-in for lists */
+.stagger-fade > * {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+.stagger-fade > *:nth-child(1) { animation-delay: 0.1s; }
+.stagger-fade > *:nth-child(2) { animation-delay: 0.2s; }
+.stagger-fade > *:nth-child(3) { animation-delay: 0.3s; }
+.stagger-fade > *:nth-child(4) { animation-delay: 0.4s; }
+.stagger-fade > *:nth-child(5) { animation-delay: 0.5s; }
+
+/* Section entrance animation */
+.section-animate {
+  animation: fadeIn 1.2s cubic-bezier(0.4, 0, 0.2, 1) both;
+}

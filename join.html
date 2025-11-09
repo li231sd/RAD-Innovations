@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1"
+      type="module"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/19a6c9693b.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Apply - RAD Programs</title>
+    <link rel="stylesheet" href="animations.css" />
+    <script src="animations.js" defer></script>
+  </head>
+  <body class="bg-black text-white">
+    <!-- NAV -->
+    <header class="absolute inset-x-0 top-0 z-50">
+      <nav
+        class="flex items-center justify-between p-6 lg:px-8 section-animate fade-in"
+        aria-label="Global"
+      >
+        <div class="flex lg:flex-1">
+          <a href="index.html" class="-m-1.5 p-1.5 btn-animate fade-in">
+            <h1 class="text-red-500 font-extrabold text-xl slide-up">RAD</h1>
+          </a>
+        </div>
+        <div class="flex lg:hidden">
+          <button
+            type="button"
+            id="open-menu"
+            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white btn-animate fade-in"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              aria-hidden="true"
+              class="size-6"
+            >
+              <path
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="hidden lg:flex lg:gap-x-12">
+          <a href="programs.html" class="text-sm font-semibold text-white"
+            >Programs</a
+          >
+          <a href="about.html" class="text-sm font-semibold text-white"
+            >About</a
+          >
+          <a href="newsletter.html" class="text-sm font-semibold text-white"
+            >Newsletter</a
+          >
+          <a href="events.html" class="text-sm font-semibold text-white"
+            >Events</a
+          >
+          <a href="products.html" class="text-sm font-semibold text-white"
+            >Products</a
+          >
+          <a href="join.html" class="text-sm font-semibold text-red-500"
+            >Join Us!</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="relative isolate px-6 pt-28 lg:px-8 text-center">
+      <h1 class="text-5xl font-extrabold text-white sm:text-6xl">Apply Here</h1>
+      <p class="mt-6 text-lg text-gray-400 max-w-2xl mx-auto slide-up">
+        Join one of our exciting divisions:
+        <span class="text-red-500">Rocketry</span>,
+        <span class="text-red-500">Aeromodelling</span>, or
+        <span class="text-red-500">Drones</span>.
+      </p>
+    </section>
+
+    <!-- APPLICATION FORM -->
+    <section class="bg-black py-20 sm:py-10">
+      <div class="mx-auto max-w-3xl px-6 lg:px-8">
+        <form
+          method="POST"
+          id="applicationForm"
+          class="space-y-8 bg-gray-1000 p-8 rounded-2xl shadow-lg fade-in"
+        >
+          <!-- Name, Email, Phone -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div class="slide-up">
+              <label class="block text-sm font-semibold text-red-400"
+                >Full Name *</label
+              >
+              <input
+                type="text"
+                name="full_name"
+                class="mt-2 block w-full rounded-lg border border-gray-700 bg-black px-4 py-2 text-white focus:border-red-500 focus:ring-red-500"
+                placeholder="Your name"
+                required
+              />
+            </div>
+            <div class="slide-up">
+              <label class="block text-sm font-semibold text-red-400"
+                >Phone *</label
+              >
+              <input
+                type="tel"
+                name="phone"
+                class="mt-2 block w-full rounded-lg border border-gray-700 bg-black px-4 py-2 text-white focus:border-red-500 focus:ring-red-500"
+                placeholder="(123) 456-7890"
+                required
+              />
+            </div>
+            <div class="slide-up">
+              <label class="block text-sm font-semibold text-red-400"
+                >Email *</label
+              >
+              <input
+                type="email"
+                name="email"
+                class="mt-2 block w-full rounded-lg border border-gray-700 bg-black px-4 py-2 text-white focus:border-red-500 focus:ring-red-500"
+                placeholder="you@example.com"
+                required
+              />
+            </div>
+            <div class="slide-up">
+              <label class="block text-sm font-semibold text-red-400"
+                >Current Math Course *</label
+              >
+              <input
+                type="text"
+                name="math_course"
+                class="mt-2 block w-full rounded-lg border border-gray-700 bg-black px-4 py-2 text-white focus:border-red-500 focus:ring-red-500"
+                placeholder="e.g. Algebra 2"
+                required
+              />
+            </div>
+          </div>
+
+          <!-- Grade Level -->
+          <div>
+            <label class="block text-sm font-semibold text-red-400"
+              >Grade Level *</label
+            >
+            <div class="mt-3 flex flex-wrap gap-4">
+              <label class="flex items-center space-x-2"
+                ><input
+                  type="radio"
+                  name="grade"
+                  value="9"
+                  class="text-red-600"
+                  required
+                /><span>9</span></label
+              >
+              <label class="flex items-center space-x-2"
+                ><input
+                  type="radio"
+                  name="grade"
+                  value="10"
+                  class="text-red-600"
+                /><span>10</span></label
+              >
+              <label class="flex items-center space-x-2"
+                ><input
+                  type="radio"
+                  name="grade"
+                  value="11"
+                  class="text-red-600"
+                /><span>11</span></label
+              >
+              <label class="flex items-center space-x-2"
+                ><input
+                  type="radio"
+                  name="grade"
+                  value="12"
+                  class="text-red-600"
+                /><span>12</span></label
+              >
+              <label class="flex items-center space-x-2"
+                ><input
+                  type="radio"
+                  name="grade"
+                  value="adult"
+                  class="text-red-600"
+                /><span>Adult</span></label
+              >
+            </div>
+          </div>
+
+          <!-- Division Choice -->
+          <div>
+            <label
+              for="first-choice"
+              class="block text-sm font-semibold text-red-400"
+              >First Choice Division *</label
+            >
+            <select
+              id="first-choice"
+              name="first_choice"
+              class="mt-2 w-full rounded-lg border border-gray-700 bg-black px-4 py-2 text-white focus:border-red-500 focus:ring-red-500"
+            >
+              <option>Rocketry</option>
+              <option>Aeromodelling</option>
+              <option>Drones</option>
+            </select>
+          </div>
+          <div>
+            <label
+              for="second-choice"
+              class="block text-sm font-semibold text-red-400"
+              >Second Choice Division *</label
+            >
+            <select
+              id="second-choice"
+              name="second_choice"
+              class="mt-2 w-full rounded-lg border border-gray-700 bg-black px-4 py-2 text-white focus:border-red-500 focus:ring-red-500"
+            >
+              <option>Rocketry</option>
+              <option>Aeromodelling</option>
+              <option>Drones</option>
+            </select>
+          </div>
+
+          <!-- Knowledge Rating -->
+          <div>
+            <label class="block text-sm font-semibold text-red-400"
+              >Prior Knowledge (1 = Very little, 5 = Expert)</label
+            >
+            <div class="flex space-x-3 mt-3">
+              <label
+                ><input
+                  type="radio"
+                  name="knowledge"
+                  value="1"
+                  class="text-red-600"
+                  required
+                />
+                1</label
+              >
+              <label
+                ><input
+                  type="radio"
+                  name="knowledge"
+                  value="2"
+                  class="text-red-600"
+                />
+                2</label
+              >
+              <label
+                ><input
+                  type="radio"
+                  name="knowledge"
+                  value="3"
+                  class="text-red-600"
+                />
+                3</label
+              >
+              <label
+                ><input
+                  type="radio"
+                  name="knowledge"
+                  value="4"
+                  class="text-red-600"
+                />
+                4</label
+              >
+              <label
+                ><input
+                  type="radio"
+                  name="knowledge"
+                  value="5"
+                  class="text-red-600"
+                />
+                5</label
+              >
+            </div>
+          </div>
+
+          <!-- Project Experience -->
+          <div>
+            <label class="block text-sm font-semibold text-red-400"
+              >Have you built any projects before? (Describe)</label
+            >
+            <textarea
+              name="projects"
+              rows="4"
+              class="mt-2 w-full rounded-lg border border-gray-700 bg-black px-4 py-2 text-white focus:border-red-500 focus:ring-red-500"
+              placeholder="Ex: I was part of the EAA and I built a plane with them."
+            ></textarea>
+          </div>
+
+          <!-- Extra Comments -->
+          <div>
+            <label class="block text-sm font-semibold text-red-400"
+              >Questions or Comments?</label
+            >
+            <textarea
+              name="comments"
+              rows="3"
+              class="mt-2 w-full rounded-lg border border-gray-700 bg-black px-4 py-2 text-white focus:border-red-500 focus:ring-red-500"
+              placeholder="Write here..."
+            ></textarea>
+          </div>
+
+          <!-- Submit -->
+          <div class="pt-4">
+            <button
+              type="submit"
+              class="w-full bg-red-600 hover:bg-red-700 transition px-6 py-3 rounded-lg font-semibold text-white shadow-md btn-animate"
+            >
+              Join Now!
+            </button>
+          </div>
+        </form>
+        <!-- PayPal Payment Section -->
+        <div
+          id="paypal-container"
+          class="mt-10 bg-gray-1000 rounded-2xl py-10 px-6 shadow-lg transition-all duration-500 hover:shadow-red-500/20 fade-in text-center"
+        >
+          <div class="max-w-md mx-auto">
+            <h3 class="text-2xl font-bold text-red-500 mb-2">
+              Complete Your Payment
+            </h3>
+            <p class="text-gray-400 text-sm mb-4">
+              Please confirm your registration by completing the secure PayPal
+              payment below. Please allow a few moments for it to load after
+              clicking the "Join Now!" button.
+            </p>
+          </div>
+          <div id="paypal-button-area" class="mt-4 flex justify-center"></div>
+          <p class="text-xs text-gray-600 italic mt-2">
+            (You’ll be redirected back automatically after payment.)
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="bg-grey-1000 py-20">
+      <div class="max-w-5xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center text-red-500">
+          Rules & Regulations
+        </h2>
+        <div class="mt-10 space-y-10 text-gray-300 stagger-fade">
+          <div>
+            <h3 class="text-xl font-semibold text-white">
+              1. NO COST IN THIS PROGRAM IS REFUNDABLE. THIS INCLUDES CLASSES
+              AND MEMBERSHIP.
+            </h3>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-semibold text-white">
+              2. ALL MATERIALS ARE EXTRA. NOTHING IS PROVIDED. ESTIMATED COST
+              WITH MATERIALS HAS BEEN PROVIDED IN THE CLASS DESCRIPTION.
+            </h3>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-semibold text-white">
+              3. WE RESERVE THE FULL RIGHT TO DENY MEMBERSHIP AND TO TERMINATE
+              MEMBERSHIP AT ALL TIMES.
+            </h3>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-white">
+              4. ALL MEMBERS ARE ALLOWED TO LEAVE THE PROGRAM AT ANY TIME AS
+              LONG AS NOTICE HAS BEEN GIVEN PRIOR.
+            </h3>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-white">
+              5. WE ARE NOT LIABLE FOR ANY INDIVIDUAL'S INJURY DURING ANY
+              SESSION, NOR ARE WE LIABLE FOR DAMAGES TO YOUR PRODUCTS.
+            </h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black text-gray-300 py-12 border-t border-gray-800">
+      <div
+        class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10"
+      >
+        <div>
+          <h2 class="text-2xl font-bold text-red-500">R A D</h2>
+          <p class="mt-3 text-sm text-gray-400">
+            © 2025 by <span class="text-red-500">RAD</span>. All rights
+            reserved.
+          </p>
+        </div>
+        <div class="flex flex-col space-y-3">
+          <a href="about.html" class="hover:text-red-500 transition">About</a>
+          <a href="programs.html" class="hover:text-red-500 transition"
+            >Programs</a
+          >
+          <a href="products.html" class="hover:text-red-500 transition"
+            >Products</a
+          >
+          <a href="join.html" class="hover:text-red-500 transition"
+            >Membership</a
+          >
+        </div>
+        <div class="text-sm space-y-2">
+          <p>
+            Tel:
+            <a href="tel:4083687751" class="hover:text-red-500">408-368-7751</a>
+          </p>
+          <p>
+            Email:
+            <a href="mailto:hima@techyslab.com" class="hover:text-red-500"
+              >hima@techyslab.com</a
+            >
+          </p>
+          <p>1187 Hibiscus Way<br />Livermore, CA 94551</p>
+        </div>
+      </div>
+      <div class="mt-10 flex justify-center space-x-6">
+        <a href="#" class="hover:text-red-500 transition"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
+        <a href="#" class="hover:text-red-500 transition"
+          ><i class="fa-brands fa-facebook"></i
+        ></a>
+        <a
+          href="https://www.instagram.com/rad_innovations/"
+          class="hover:text-red-500 transition"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+      </div>
+    </footer>
+    <div
+      id="mobile-menu"
+      class="lg:hidden hidden fixed inset-0 bg-black/90 z-40"
+    >
+      <div
+        class="flex flex-col items-center justify-center h-full space-y-6 text-white"
+      >
+        <a href="programs.html" class="text-lg font-semibold">Programs</a>
+        <a href="about.html" class="text-lg font-semibold">About</a>
+        <a href="newsletter.html" class="text-lg font-semibold">Newsletter</a>
+        <a href="events.html" class="text-lg font-semibold">Events</a>
+        <a href="products.html" class="text-lg font-semibold">Products</a>
+        <a href="join.html" class="text-lg font-semibold">Join Us!</a>
+        <button id="close-menu" class="mt-8 text-red-500 font-bold">
+          Close ✕
+        </button>
+      </div>
+    </div>
+
+    <script src="https://www.paypal.com/sdk/js?client-id=BAAMlxiptag7edXh5cjYYwAaLqOcxYW385bpLZgFDcyaAgCVNYS_CJgQWdr8oMY4IHslJ3CMNU52-g9lGQ&components=hosted-buttons&enable-funding=venmo&currency=USD"></script>
+
+    <script>
+      const openMenu = document.getElementById("open-menu");
+      const closeMenu = document.getElementById("close-menu");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      document.addEventListener("DOMContentLoaded", () => {
+        openMenu.addEventListener("click", () =>
+          mobileMenu.classList.remove("hidden")
+        );
+        closeMenu.addEventListener("click", () =>
+          mobileMenu.classList.add("hidden")
+        );
+      });
+
+      // Google Apps Script URL
+      const SHEET_URL =
+        "https://script.google.com/macros/s/AKfycbyoFzb3ok1ocwJH9dg_bzHcyZHIvNS1iQKriYaK59Rmg7JO-Yd4zXN-yYHSayLuqCtI/exec";
+
+      document
+        .getElementById("applicationForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const formData = Object.fromEntries(new FormData(e.target).entries());
+          localStorage.setItem("applicationData", JSON.stringify(formData)); // Save for after payment
+
+          // Redirect to PayPal checkout
+          paypal
+            .HostedButtons({
+              hostedButtonId: "AHJ8RCCCUTWNL",
+              createOrder: () => {},
+              onApprove: (data, actions) => {
+                console.log("Payment approved:", data);
+              },
+            })
+            .render("#paypal-container");
+
+          document
+            .getElementById("paypal-container")
+            .scrollIntoView({ behavior: "smooth" });
+        });
+    </script>
+  </body>
+</html>
